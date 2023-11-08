@@ -11,3 +11,13 @@ public class JavaCrudApplication {
 	}
 
 }
+
+@GetMapping("/")
+public String init() {
+	return String.format("Welcome to Java CRUD Application!");
+}
+
+@GetMapping("/hello")
+public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+return String.format("Hello %s!", name);
+}
